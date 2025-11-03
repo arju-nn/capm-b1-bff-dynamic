@@ -1,0 +1,32 @@
+{
+  "name": "b1-bff-dynamic",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:api": "node scripts/test-api.js",
+    "discover:cap": "node scripts/discover-cap-endpoint.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^4.1.2",
+    "@sap/xsenv": "^4.1.0",
+    "@sap/xssec": "^4.1.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.9.2",
+    "axios": "^1.13.1",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/sap__xsenv": "^3.3.2",
+    "ts-node-dev": "^2.0.0"
+  }
+}
