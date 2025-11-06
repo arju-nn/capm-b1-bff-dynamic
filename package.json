@@ -9,6 +9,9 @@
     "build": "tsc",
     "start": "node dist/server.js"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "license": "ISC",
   "dependencies": {
     "@sap-cloud-sdk/connectivity": "^4.1.2",
