@@ -1,0 +1,27 @@
+# Render.com deployment configuration
+# This file enables easy deployment to Render.com
+# Just connect your GitHub repo and Render will use this config
+
+services:
+  - type: web
+    name: b1-bff-dynamic
+    env: node
+    region: oregon  # or frankfurt, singapore, etc.
+    plan: free  # Change to 'starter' ($7/month) for no sleep
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      # Add your SAP CAP service URL
+      - key: CAP_BASE_URL
+        sync: false  # Set manually in Render dashboard
+      # Allow all origins for POC (change in production)
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      # If using development mode (no SAP BTP services)
+      # - key: NODE_ENV
+      #   value: development
+

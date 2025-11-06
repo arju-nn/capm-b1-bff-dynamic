@@ -13,8 +13,6 @@ applications:
       - cap-b1-xsuaa
       - cap-b1-destination
       - cap-b1-connectivity
-    routes:
-      - route: b1-bff-dynamic-{{random-route}}
     health-check-type: http
     health-check-http-endpoint: /health
     timeout: 180
